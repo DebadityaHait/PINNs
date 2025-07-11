@@ -28,6 +28,7 @@ The project is organized as follows:
 │   ├── Figure5_Loss_History.png
 │   ├── Figure6_Parameter_Evolution.png
 │   └── Table5_Final_Parameters.csv
+├── requirements.txt     # Python dependencies
 └── README.md            # This file
 ```
 
@@ -37,6 +38,7 @@ The project is organized as follows:
 -   **`src/analyser.py`**: The analysis script that processes the outputs from all 8 models and generates the summary figures and tables presented in the paper.
 -   **`results/models/`**: Contains the output directories for each model run with trained model parameters and performance metrics.
 -   **`paper/`**: Contains the research paper and the final generated figures and tables.
+-   **`requirements.txt`**: Lists all Python dependencies required to run the project.
 
 ---
 
@@ -52,7 +54,11 @@ A dedicated Python environment is recommended (e.g., using `venv` or `conda`).
 Ensure you have Python 3.8+ installed.
 
 **2. Install Dependencies:**
-The required Python libraries are listed in the `requirements.txt` file (if provided), or you can install them manually. The most important dependency is a GPU-enabled version of PyTorch.
+The required Python libraries are listed in the `requirements.txt` file. You can install them using pip:
+
+```bash
+pip install -r requirements.txt
+```
 
    a. **(Optional but Recommended) Set up for GPU Training:**
       - Make sure you have an NVIDIA GPU and up-to-date drivers.
@@ -62,11 +68,6 @@ The required Python libraries are listed in the `requirements.txt` file (if prov
         ```bash
         pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
         ```
-
-   b. **Install Other Libraries:**
-      ```bash
-      pip install numpy pandas matplotlib seaborn jupyterlab
-      ```
 
 ### Step 2: Running the Model Training
 
